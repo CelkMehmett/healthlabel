@@ -1,0 +1,67 @@
+name: healthlabel
+description: AI-powered health label scanner and analyzer with multilingual support
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Media & Capture
+  camera: ^0.10.6
+  image_picker: ^1.1.1
+  mobile_scanner: ^7.0.1   # Barkod tarama sayfası kullanıyorsa
+
+  # OCR (on-device, ML Kit)
+  google_mlkit_text_recognition: ^0.13.0
+
+  # Kalıcı veri (Hive kaldırıldı)
+  shared_preferences: ^2.2.2
+
+  # İzinler
+  permission_handler: ^11.3.1
+
+  # Grafikler (risk dağılımı pie chart)
+  fl_chart: ^0.66.0       # 1.x yerine 0.66.0 API’sı ile uyumlu
+
+  # Yardımcılar
+  url_launcher: ^6.2.6
+  http: ^1.2.1
+  translator: ^1.0.3+1
+  share_plus: ^10.0.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.2
+  flutter_launcher_icons: ^0.13.1
+  flutter_native_splash: ^2.4.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/bg_pattern.png
+    - assets/icon.png
+    - assets/icon_foreground.png
+    - assets/splash_logo.png
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: assets/icon.png
+  adaptive_icon_background: "#2E7D32"
+  adaptive_icon_foreground: assets/icon_foreground.png
+
+flutter_native_splash:
+  color: "#E8F5E9"
+  color_dark: "#101311"
+  # image: assets/splash_logo.png
+  branding: assets/icon.png
+  branding_mode: bottom
+  android_12:
+    # image: assets/splash_logo.png
+    icon_background_color: "#E8F5E9"
+    branding: assets/icon.png
